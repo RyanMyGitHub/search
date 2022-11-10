@@ -64,12 +64,12 @@ def read():
 
         collection_ref = db.collection("111")
         docs = collection_ref.get()
-        for doc in docs:
+    for doc in docs:
             dict = doc.to_dict()
-            if keyword in dict["Course"] and Leacture in dict["Leacture"]:
+    if keyword in dict["Course"] and Leacture in dict["Leacture"]:
         result += format(dict["Leacture"])+"老師開的"+format(dict["Course"])+"課程,每週"+format(dict["Time"])+"於"+format(dict["Room"])+"上課<br>"
 
-            if result == "":
+    if result == "":
         result = "抱歉，查無相關條件的選修課程"    
 
         return result
